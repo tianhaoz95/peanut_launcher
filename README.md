@@ -25,6 +25,8 @@ Simply put, supervisor will first take in many launchers, and then run them in d
 
 ## Launcher commonly go through: check->execute->wait->report
 
+![Common launcher approach](https://raw.githubusercontent.com/tianhaoz95/pics/master/launcher%20schema%20-%20Page%201%20(1).png)
+
 ## Installation can be done from git
 
 `pip install git+https://github.com/tianhaoz95/peanut_launcher.git` virtual environment preferred.
