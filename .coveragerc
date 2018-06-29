@@ -10,4 +10,4 @@ ignore_errors = True
 omit =
     peanut_launcher/*
     setup.py
-    test/test_.*
+    tests/test_.*
