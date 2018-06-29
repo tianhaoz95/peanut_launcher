@@ -27,6 +27,8 @@ jobs:
             virtualenv --python=python2 venv
             source venv/bin/activate
             pip install -r requirements.txt
+            pip install codecov
+            pip install pytest pytest-cov
 
       # run tests!
       # this example uses Django's built-in test-runner
@@ -44,7 +46,7 @@ jobs:
           command: |
             source venv/bin/activate
             cp -r peanut_launcher tests
-            pytest --rootdir=tests
+            pytest --rootdir=tests --cov=./
 
       - run:
           name: run pip tests
@@ -52,7 +54,13 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
-            pytest --rootdir=tests
+            pytest --rootdir=tests --cov=./
+            
+      - run:
+          name: generate code coverage report
+          command: |
+            source venv/bin/activate
+            codecov --token=5309a80a-703e-4362-bfe3-90e712821a8c
 
       - store_artifacts:
           path: test-reports
