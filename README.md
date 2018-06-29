@@ -8,6 +8,8 @@ Launching for ROS project can be painful when the project gets big. Even when yo
 
 ## A project consists of 1 supervisor and many launchers
 
+The basic idea is that supervisor will manage how to launch launchers, and launchers will take care of the details of actual launching process. The only contract supervisor ask from launcher is that it has a launch method which returns a report (dict) consist of status and details of this launching task. This means that you can take any combination of parts from one project and make them into a new project because the supervior doesn't know details about launcher by default, so nothing will break.
+
 ![Supervisor vs. Launcher](https://raw.githubusercontent.com/tianhaoz95/pics/master/supervisor%20vs%20launcher%20-%20Page%201.png)
 
 ## Supervisor controls the flow of launching and Launcher controls the details
