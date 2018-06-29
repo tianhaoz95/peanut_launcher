@@ -14,4 +14,6 @@ The basic idea is that supervisor will manage how to launch launchers, and launc
 
 ## Supervisor controls the flow of launching and Launcher controls the details
 
+Simply put, supervisor will first take in many launchers, and then run them in different threads and get report back when they finish. Compose a final report fom the report and let the user know how the overall launching process went.
+
 ![What is a supervisor](https://raw.githubusercontent.com/tianhaoz95/pics/master/Blank%20Diagram%20-%20Page%201.png)
