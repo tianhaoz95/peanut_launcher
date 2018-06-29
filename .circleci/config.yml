@@ -30,8 +30,7 @@ jobs:
             pip install codecov
             pip install pytest pytest-cov
             pip install pytest-html
-            pip install pytest-json-report
-
+            
       # run tests!
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
@@ -49,7 +48,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             cp -r peanut_launcher tests
-            pytest --rootdir=tests --cov=./ --html=test-reports/pytest_reports/native/report.html --json-report-file=test-results/pytest_reports/native/report.json
+            pytest --rootdir=tests --cov=./ --html=test-reports/pytest_reports/native/report.html
             
       - run:
           name: generate code coverage report
@@ -63,7 +62,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
-            pytest --rootdir=tests --html=test-reports/pytest_reports/package/report.html --json-report-file=test-results/pytest_reports/package/report.json
+            pytest --rootdir=tests --html=test-reports/pytest_reports/package/report.html
 
       - store_artifacts:
           path: test-reports
