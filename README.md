@@ -23,7 +23,7 @@ Simply put, supervisor will first take in many launchers, and then run them in d
 
 ![What is a supervisor](https://raw.githubusercontent.com/tianhaoz95/pics/master/Blank%20Diagram%20-%20Page%201.png)
 
-## Launcher commonly go through: check -> act -> wait -> report
+## Launcher commonly go through: check:wavy_dash:act:wavy_dash:wait:wavy_dash:report
 
 ![Common launcher approach](https://raw.githubusercontent.com/tianhaoz95/pics/master/launcher%20schema%20-%20Page%201%20(1).png)
 
