@@ -8,6 +8,6 @@ Launching for ROS project can be painful when the project gets big. Even when yo
 
 ![Supervisor vs. Launcher](https://raw.githubusercontent.com/tianhaoz95/pics/master/supervisor%20vs%20launcher%20-%20Page%201.png)
 
-## Supervisor controls the flow of launching 
+## Supervisor controls the flow of launching and Launcher controls the details of launching
 
 ![What is a supervisor](https://raw.githubusercontent.com/tianhaoz95/pics/master/Blank%20Diagram%20-%20Page%201.png)
