@@ -48,7 +48,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             cp -r peanut_launcher tests
-            pytest --rootdir=tests --cov=./ --html=test-results/native/results.html
+            pytest --rootdir=tests --cov=./ --html=pytest_reports/native/report.html
             
       - run:
           name: generate code coverage report
@@ -62,7 +62,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
-            pytest --rootdir=tests --html=test-results/pip/results.html
+            pytest --rootdir=tests --html==pytest_reports/pip/report.html
 
       - store_artifacts:
           path: test-reports
