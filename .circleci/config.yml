@@ -45,6 +45,7 @@ jobs:
           name: run native tests
           command: |
             source venv/bin/activate
+            rm -rf tests/peanut_launcher
             cp -r peanut_launcher tests
             pytest --rootdir=tests --cov=./
             
