@@ -29,6 +29,7 @@ jobs:
             pip install -r requirements.txt
             pip install codecov
             pip install pytest pytest-cov
+            pip install pytest-html
 
       # run tests!
       # this example uses Django's built-in test-runner
@@ -47,7 +48,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             cp -r peanut_launcher tests
-            pytest --rootdir=tests --cov=./
+            pytest --rootdir=tests --cov=./ --html=test-results/native/results.html
             
       - run:
           name: generate code coverage report
@@ -61,8 +62,11 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
-            pytest --rootdir=tests
+            pytest --rootdir=tests --html=test-results/pip/results.html
 
       - store_artifacts:
           path: test-reports
           destination: test-reports
+          
+      - store_test_results:
+          path: test-results
