@@ -1,3 +1,4 @@
+![LOGO](https://raw.githubusercontent.com/tianhaoz95/pics/master/peanut-logo.PNG)
 # Peanut Launcher
 
 ## Introduction
