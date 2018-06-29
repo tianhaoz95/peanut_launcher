@@ -3,6 +3,7 @@
 # Peanut Launcher
 
 [![CircleCI](https://circleci.com/gh/tianhaoz95/peanut_launcher.svg?style=svg)](https://circleci.com/gh/tianhaoz95/peanut_launcher)
+[![codebeat badge](https://codebeat.co/badges/7e6bd6f3-e712-4a2d-bc47-0b537dc107eb)](https://codebeat.co/projects/github-com-tianhaoz95-peanut_launcher-master)
 
 ## Introduction
 
