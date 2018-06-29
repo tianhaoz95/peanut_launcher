@@ -62,7 +62,7 @@ jobs:
             source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
-            pytest --rootdir=tests --html==test-reports/pytest_reports/pip/report.html
+            pytest --rootdir=tests --html=test-reports/pytest_reports/package/report.html
 
       - store_artifacts:
           path: test-reports
