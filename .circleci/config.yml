@@ -20,24 +20,11 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run:
           name: install dependencies
           command: |
-            python2 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+            pip install virtualenv
+            virtualenv --python=python2 venv
 
       # run tests!
       # this example uses Django's built-in test-runner
@@ -47,20 +34,20 @@ jobs:
       - run:
           name: python version check
           command: |
-            . venv/bin/activate
+            source venv/bin/activate
             python --version
 
       - run:
           name: run native tests
           command: |
-            . venv/bin/activate
+            source venv/bin/activate
             cp -r peanut_launcher tests
             pytest --rootdir=tests
 
       - run:
           name: run pip tests
           command: |
-            . venv/bin/activate
+            source venv/bin/activate
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
             pytest --rootdir=tests
