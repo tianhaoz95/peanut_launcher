@@ -47,7 +47,13 @@ jobs:
             source venv/bin/activate
             cp -r peanut_launcher tests
             pytest --rootdir=tests --cov=./
-
+            
+      - run:
+          name: generate code coverage report
+          command: |
+            source venv/bin/activate
+            codecov --token=5309a80a-703e-4362-bfe3-90e712821a8c
+            
       - run:
           name: run pip tests
           command: |
@@ -55,12 +61,6 @@ jobs:
             rm -rf tests/peanut_launcher
             pip install git+https://github.com/tianhaoz95/peanut_launcher.git
             pytest --rootdir=tests
-            
-      - run:
-          name: generate code coverage report
-          command: |
-            source venv/bin/activate
-            codecov --token=5309a80a-703e-4362-bfe3-90e712821a8c
 
       - store_artifacts:
           path: test-reports
