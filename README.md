@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/tianhaoz95/peanut_launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/tianhaoz95/peanut_launcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Intro: easier approach to ROS launching
+## Intro: an easier approach to ROS launching
 
 Launching for ROS project can be painful when the project gets big. Even when you have a perfect launch file, it is still hard to migrate and reuse part of the project in another project or configure the launch file dynamically for testing purpose. Here the idea is to let each atomic part of the project take care of its own launching process, and the high level project will act like a supervisor to monitor the launching process without being aware of what is being launched.
 
