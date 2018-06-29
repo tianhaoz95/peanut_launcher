@@ -23,7 +23,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pip install virtualenv
+            sudo pip install virtualenv
             virtualenv --python=python2 venv
 
       # run tests!
