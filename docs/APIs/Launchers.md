@@ -10,7 +10,7 @@ Although you can always write your own launcher as long as it has a launch metho
 
 ### BaseLauncher
 
-BaseLauncher is the abstract base class for all launchers which only enforce a launch method.
+BaseLauncher is the abstract base class for all launchers which only enforce a launch method. If you want to fully customize your launcher, you will derive from this class and ensure that your process is fully up when the launch method returns.
 
 ### Example
 
