@@ -30,3 +30,30 @@ class MySupervisor(BaseSupervisor):
     except:
       return 'fail', None
 ```
+
+### MultiThreadSupervisor
+
+#### Example
+
+```python
+from peanut_launcher.supervisor import MultiThreadSupervisor
+from peanut_launcher.launchers import CommandLauncher
+
+class Checker():
+  def __init__(self, package_name):
+    self.package_name = package_name
+  
+  def check_output(self, output):
+    return self.package_name in output
+
+cl1 = CommandLauncher('roslaunch my_package_1', 'rostopic list', Checker('my_package_1').check_output)
+cl2 = CommandLauncher('roslaunch my_package_2', 'rostopic list', Checker('my_package_2').check_output)
+cl3 = CommandLauncher('roslaunch my_package_3', 'rostopic list', Checker('my_package_3').check_output)
+
+s = MultiThreadSupervisor()
+s.add_launcher('cl1', cl1)
+s.add_launcher('cl2', cl2)
+s.add_launcher('cl3', cl3)
+
+status, info = s.launch_all()
+```
