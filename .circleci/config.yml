@@ -61,7 +61,7 @@ jobs:
           command: |
             source venv/bin/activate
             rm -rf tests/peanut_launcher
-            cd peapeanut_launcher
+            cd peanut_launcher
             python setup.py build
             python setup.py install
             cd ..
