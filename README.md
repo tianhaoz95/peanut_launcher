@@ -11,7 +11,7 @@
 
 Launching for ROS project can be painful when the project gets big. Even when you have a perfect launch file, it is still hard to migrate and reuse part of the project in another project or configure the launch file dynamically for testing purpose. Here the idea is to let each atomic part of the project take care of its own launching process, and the high level project will act like a supervisor to monitor the launching process without being aware of what is being launched.
 
-Documentation is [here](https://tianhaoz95.github.io/peanut_launcher)!
+Documentation is [here](https://tianhaoz95.github.io/peanut_launcher)! :rocket: :rocket: :rocket:
 
 ## A project consists of 1 supervisor and many launchers
 
