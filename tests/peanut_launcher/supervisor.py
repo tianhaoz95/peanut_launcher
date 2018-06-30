@@ -36,6 +36,7 @@ class MultiThreadSupervisor():
         except:
             report['status'] = 'fail'
             report['detail'] = 'unknown error'
+            self.logger.captureException()
         self.report_dict[launcher_id] = report
 
     def launch_all(self):
