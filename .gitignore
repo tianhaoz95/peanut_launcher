@@ -4,3 +4,4 @@ venv
 __pycache__
 testenv
 build
+.DS_Store
