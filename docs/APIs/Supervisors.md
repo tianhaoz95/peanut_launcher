@@ -51,6 +51,7 @@ cl2 = CommandLauncher('roslaunch my_package_2', 'rostopic list', Checker('my_pac
 cl3 = CommandLauncher('roslaunch my_package_3', 'rostopic list', Checker('my_package_3').check_output)
 
 s = MultiThreadSupervisor()
+
 s.add_launcher('cl1', cl1)
 s.add_launcher('cl2', cl2)
 s.add_launcher('cl3', cl3)
