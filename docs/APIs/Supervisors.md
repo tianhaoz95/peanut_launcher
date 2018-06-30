@@ -10,6 +10,8 @@ Simply put, supervisor will first take in many launchers, and then run them in d
 
 ### BaseSupervisor
 
+`BaseSupervisor` is the base class for all the supervisor classes. It exist to ensure that supervisor can be customized to any degree. It enforces `add_launcher()` and `launch_all()` two methods. Basically what it says is that, a supervisor must be able to take in a set of launchers and make sure to launch them all.
+
 #### Example
 
 ```python
