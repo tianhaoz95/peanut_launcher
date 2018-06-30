@@ -1,9 +1,20 @@
 import inspect
 import threading
+import abc, six
 from raven import Client
 from utils.config import sentry_api
 
-class MultiThreadSupervisor():
+@six.add_metaclass(abc.ABCMeta)
+class BaseSupervisor():
+    @abc.abstractmethod
+    def add_launcher(self):
+        pass
+
+    @abc.abstractmethod
+    def launch_all(self):
+        pass
+
+class MultiThreadSupervisor(BaseSupervisor):
     def __init__(self):
         self.launcher_dict = {}
         self.report_dict = {}
