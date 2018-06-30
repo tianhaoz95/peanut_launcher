@@ -33,3 +33,14 @@ Although you can always write your own launcher as long as it has a launch metho
 
 * `pip install git+https://github.com/tianhaoz95/peanut_launcher.git` virtual environment preferred.
 * Then type in `import peanut_launcher` in python to verify if it has been installed.
+
+## Contribution should be submitted through pull requests
+
+Steps to contribute:
+
+* Fork the repository
+* Make changes in the fork
+* Send a pull request to a reasonable feature branch
+* The changes will go through CircleCI
+* I will review the code once it passes all the automated tests
+* The changes will be merged into main repository
