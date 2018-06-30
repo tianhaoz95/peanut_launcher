@@ -24,6 +24,8 @@ class MyLauncher(BaseLauncher):
 
 ### BlockingLauncher
 
+#### Example
+
 ```python
 from peanut_launcher.launchers import BlockingLauncher
 
@@ -39,6 +41,8 @@ class MyLauncher(BlockingLauncher):
 ```
 
 ### CommandLauncher
+
+#### Example
 
 ```python
 from peanut_launcher.launchers import CommandLauncher
