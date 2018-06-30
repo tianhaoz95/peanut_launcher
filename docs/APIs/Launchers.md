@@ -24,6 +24,8 @@ class MyLauncher(BaseLauncher):
 
 ### BlockingLauncher
 
+`BlockingLauncher` is derived from `BaseLauncher`, and it is for the model where you will execute a synchronize launching procedure and then constantly checking if it has finished. To use this class, you will need to implement `launch_finished(self)` method which will return True if launching is finished, False if not, and `launch_process(self)` which will execute the launching process.
+
 #### Example
 
 ```python
