@@ -1,10 +1,13 @@
 import inspect
 import threading
+from raven import Client
+from utils.config import sentry_api
 
 class MultiThreadSupervisor():
     def __init__(self):
         self.launcher_dict = {}
         self.report_dict = {}
+        self.logger = Client(sentry_api)
 
     def add_launcher(self, launcher_id, launcher):
         if not inspect.ismethod(launcher.launch):

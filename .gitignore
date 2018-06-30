@@ -5,3 +5,5 @@ __pycache__
 testenv
 build
 .DS_Store
+peanut_launcher.egg-info
+dist
