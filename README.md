@@ -32,3 +32,5 @@ Although you can always write your own launcher as long as it has a launch metho
 ## Installation can be done from git
 
 `pip install git+https://github.com/tianhaoz95/peanut_launcher.git` virtual environment preferred.
+
+Then type in `import peanut_launcher` in python to verify if it has been installed.
