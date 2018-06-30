@@ -18,9 +18,39 @@ BaseLauncher is the abstract base class for all launchers which only enforce a l
 from peanut_launcher.launchers import BaseLauncher
 
 class MyLauncher(BaseLauncher):
-  print('pretending I am launching something ...')
+  def launch(self):
+    print('pretending I am launching something ...')
 ```
 
 ### BlockingLauncher
 
+```python
+from peanut_launcher.launchers import BlockingLauncher
+
+class MyLauncher(BlockingLauncher):
+  def launch_finished(self):
+    if 'my_topic' in check_output('rostopic list'):
+      return True
+    else:
+      return False
+
+  def launch_process(self):
+    launch_command('roslaunch my_package')
+```
+
 ### CommandLauncher
+
+```python
+from peanut_launcher.launchers import CommandLauncher
+
+launch_command = 'roslaunch my_package'
+check_command = 'rostopic list'
+
+def output_checker(output):
+  if 'my_package' in output:
+    return True
+  else:
+    return False
+
+my_launcher = CommandLauncher(launch_command, check_command, output_checker)
+```
