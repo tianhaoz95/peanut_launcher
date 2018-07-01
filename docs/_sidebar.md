@@ -4,4 +4,4 @@
   * [Supervisors](APIs/Supervisors.md)
 * [For Developers](Developer/README.md)
 * [Contribute](Contribute/README.md)
-* [I'm Bored By Debugging](Fun/README.md)
+* [I'm Bored of Debugging](Fun/README.md)
