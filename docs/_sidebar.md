@@ -3,5 +3,6 @@
   * [Launchers](APIs/Launchers.md)
   * [Supervisors](APIs/Supervisors.md)
 * [For Developers](Developer/README.md)
+  * [Guideline](Developer/Guideline.md)
 * [Contribute](Contribute/README.md)
 * [I'm Bored of Debugging](Fun/README.md)
