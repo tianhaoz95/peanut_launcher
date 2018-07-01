@@ -6,6 +6,7 @@ source = __YOUR_PROJECT_FOLDER__
 exclude_lines =
     raise NotImplementedError
     if __name__ == .__main__.:
+    pass
 ignore_errors = True
 omit =
     peanut_launcher/*
