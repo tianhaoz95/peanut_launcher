@@ -41,6 +41,8 @@ in python to verify if it has been installed.
 
 ## Contribution should be submitted through pull requests {docsify-ignore}
 
+![Launcher!](https://media.giphy.com/media/8E1uPDT9gfhJK/giphy.gif)
+
 Steps to contribute:
 
 * Fork the repository
